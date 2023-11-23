@@ -33,6 +33,10 @@ class helloworld {
 
 **Bước 1:** Vào thư mục chứa file code, mở terminal
 
+Chọn **Run** để chạy chương trình
+
+![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/dde72a23-e4cb-46b6-8d55-d61588b3a413)
+
 **Bước 2:** Tạo class
 
 **Cú pháp:**
@@ -131,3 +135,22 @@ boolean isTrue = true;
 
 boolean isFalse = false; 
 ```
+
+## 6. if, else
+
+**Cú pháp:**
+
+```
+if (điều kiện1) {
+    // Mã khi điều kiện1 đúng
+} else if (điều kiện2) {
+    // Mã khi điều kiện2 đúng
+} else {
+    // Mã khi tất cả các điều kiện đều sai
+}
+```
+
+**Quy tắc:**
+
+- Có `if` trước, xong mới có `else if`, `else`
+- Không nhất thiết phải có một câu lệnh `else` sau mỗi câu lệnh `if` trong một chương trình Java
