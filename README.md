@@ -8,6 +8,8 @@
   - [3. Chạy chương trình](#3-chạy-chương-trình)
   - [4. In ra màn hình](#4-in-ra-màn-hình)
   - [5. Khai báo biến](#5-khai-báo-biến)
+  - [6. Nhập từ bàn phím](#6-nhập-từ-bàn-phím)
+  - [7. if, else if, else](#7-if-else-if-else)
 
 ## 1. Cài đặt môi trường
 
@@ -136,7 +138,49 @@ boolean isTrue = true;
 boolean isFalse = false; 
 ```
 
-## 6. if, else
+## 6. Nhập từ bàn phím
+
+**Cú pháp:**
+
+- **Khai báo tên thư viện sử dụng:**
+
+```java
+import java.util.Scanner; // Thư viện 
+```
+
+- **Khởi tạo đối tượng Scanner:**
+
+```java
+Scanner input = new Scanner(System.in);
+```
+
+- **Nhập từ bàn phím với biến khởi tạo:**
+
+`nextInt()` là nhập từ bàn phím số nguyên
+
+`nextDouble()` là nhập từ bàn phím số thực
+
+`nextLine()` là nhập từ bàn phím một chuỗi đầy đủ có dấu cách
+
+`next()` là nhập từ bàn phím một chuỗi không có dấu cách
+
+*Ví dụ:*
+
+```java
+import java.util.Scanner;
+
+class printNumber {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+
+        System.err.println(number);
+
+    }
+}
+```
+
+## 7. if, else if, else
 
 **Cú pháp:**
 
