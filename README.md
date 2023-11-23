@@ -8,8 +8,9 @@
   - [3. Chạy chương trình](#3-chạy-chương-trình)
   - [4. In ra màn hình](#4-in-ra-màn-hình)
   - [5. Khai báo biến](#5-khai-báo-biến)
-  - [6. Nhập từ bàn phím](#6-nhập-từ-bàn-phím)
-  - [7. if, else if, else](#7-if-else-if-else)
+  - [6. Toán tử](#6-toán-tử)
+  - [7. Nhập từ bàn phím](#7-nhập-từ-bàn-phím)
+  - [8. if, else if, else](#8-if-else-if-else)
 
 ## 1. Cài đặt môi trường
 
@@ -138,7 +139,22 @@ boolean isTrue = true;
 boolean isFalse = false; 
 ```
 
-## 6. Nhập từ bàn phím
+## 6. Toán tử
+
+| Toán tử | Chức năng |
+| :---: | :---: |
+| `+` | Cộng 2 số |
+| `-` | Trừ 2 số |
+| `*` | Nhân 2 số |
+| `/` | Chia 2 số |
+| `==` | So sánh 2 số bằng nhau |
+| `>=` | So sánh lớn hơn bằng |
+| `<=` | So sánh nhỏ hơn bằng |
+| `&&` | AND |
+| `||` | OR |
+| `!` | NOT |
+
+## 7. Nhập từ bàn phím
 
 **Cú pháp:**
 
@@ -180,7 +196,7 @@ class printNumber {
 }
 ```
 
-## 7. if, else if, else
+## 8. if, else if, else
 
 **Cú pháp:**
 
@@ -193,6 +209,10 @@ if (điều kiện1) {
     // Mã khi tất cả các điều kiện đều sai
 }
 ```
+
+**Chú ý:**
+
+Trong điều kiện `if` muốn so sánh bằng nhau ta sử dụng toán tử `==`
 
 **Quy tắc:**
 
