@@ -151,7 +151,7 @@ boolean isFalse = false;
 | `>=` | So sánh lớn hơn bằng |
 | `<=` | So sánh nhỏ hơn bằng |
 | `&&` | AND |
-| `||` | OR |
+| &#124;&#124; | OR |
 | `!` | NOT |
 
 ## 7. Nhập từ bàn phím
