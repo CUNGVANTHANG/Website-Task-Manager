@@ -27,11 +27,32 @@ class helloworld {
 
 ## 3. Chạy chương trình
 
-Cách 1: Chạy trên `Visual Studio Code`
+- **Cách 1:** Chạy trên `Visual Studio Code`
 
-Cách 2: Chạy trên `terminal`
+- **Cách 2:** Chạy trên `terminal`
 
-Bước 1: Vào thư mục chứa file code, mở terminal
+**Bước 1:** Vào thư mục chứa file code, mở terminal
+
+**Bước 2:** Tạo class
+
+**Cú pháp:**
+
+```
+javac [Tên chương trình Java (bao gồm .java đằng sau)]
+```
+
+![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/395d6460-691a-4890-a037-0d6b997d83ec)
+
+
+**Bước 3:** Chạy chương trình
+
+**Cú pháp:**
+
+```
+java [Tên class (không bao gồm .class đằng sau)]
+```
+
+![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/b23f95a5-d831-4d55-83b6-1c4b43b0b7a1)
 
 ## 4. In ra màn hình
 
