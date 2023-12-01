@@ -77,6 +77,8 @@ Invalid (n > 1)
 
 **Exercise 2:** Write a program to print the even and odd numbers in the segment [a, b] and the number of even and odd elements. Know that a and b are two numbers entered from the keyboard
 
+*Use `System.out.print()` to display along the line*
+
 Testcase 1:
 ```
 Enter value a:
@@ -100,4 +102,42 @@ Enter value a:
 Enter value b:
 -5
 Invalid (b > a)
+```
+
+**Exercise 3:** Write a program to calculate the sum of digits in any integer n. Know that n is entered from the keyboard
+
+```
+Enter value n:
+123
+Result:
+6
+```
+
+**Exercise 4:** Write a program to reverse a number n. Know that n is entered from the keyboard
+
+Testcase 1:
+
+```
+Enter value n:
+789
+Result:
+987
+```
+
+Testcase 2:
+
+```
+Enter value n:
+890
+Result:
+98
+```
+
+**Exercise 5:** Write a program to convert the integer n from base 10 to base 2. Know how to enter n from the keyboard
+
+```
+Enter value n:
+10
+Result:
+1010
 ```
