@@ -75,7 +75,7 @@ Result:
 Invalid (n > 1)
 ```
 
-**Exercise 2:** Write a program to print the even and odd numbers in the segment [a, b] and the number of even numbers and the number of odd numbers. Know that a and b are two numbers entered from the keyboard
+**Exercise 2:** Write a program to print the even and odd numbers in the segment [a, b] and the number of even and odd elements. Know that a and b are two numbers entered from the keyboard
 
 Testcase 1:
 ```
@@ -83,5 +83,21 @@ Enter value a:
 1
 Enter value b:
 10
+Even numbers:
+2 4 6 8 10
+Odd numbers:
+1 3 5 7 9
+The number of elements is even:
+5
+The number of elements is odd:
+5
+```
 
+Testcase 2:
+```
+Enter value a:
+1
+Enter value b:
+-5
+Invalid (b > a)
 ```
