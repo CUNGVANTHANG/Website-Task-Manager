@@ -55,6 +55,14 @@ Vòng lặp thứ 4: 4
 Vòng lặp thứ 5: 5
 ```
 
+## 3. do..while
+
+```java
+do {
+    // block of commands to be executed
+} while (condition);
+```
+
 # B. Bài tập
 
 **Exercise 1:** Write a program to calculate the sum of digits from 1..n. With n input from the keyboard.
