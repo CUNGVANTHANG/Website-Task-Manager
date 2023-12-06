@@ -147,6 +147,7 @@ boolean isFalse = false;
 | `-` | Trừ 2 số |
 | `*` | Nhân 2 số |
 | `/` | Chia 2 số |
+| `%` | Chia lấy phần dư |
 | `=` | Gán |
 | `==` | So sánh 2 số bằng nhau |
 | `>=` | So sánh lớn hơn bằng |
