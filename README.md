@@ -11,6 +11,8 @@
   - [6. Toán tử](#6-toán-tử)
   - [7. Nhập từ bàn phím](#7-nhập-từ-bàn-phím)
   - [8. if, else if, else](#8-if-else-if-else)
+  - [9. for, while, do while](#9-for-while-do-while)
+  - [10. Mảng 1 chiều (Array)](#10-mảng-1-chiều-array)
 
 ## 1. Cài đặt môi trường
 
@@ -220,3 +222,70 @@ Trong điều kiện `if` muốn so sánh bằng nhau ta sử dụng toán tử 
 
 - Có `if` trước, xong mới có `else if`, `else`
 - Không nhất thiết phải có một câu lệnh `else` sau mỗi câu lệnh `if` trong một chương trình Java
+
+## 9. for, while, do while
+### 1. for
+**Syntax:**
+
+```java
+for (variable_initialization; condition; increase/decrease_variable) {
+    // block of commands to be executed
+}
+```
+
+**Example:**
+
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Vòng lặp thứ " + i ":" + i);
+}
+```
+
+Result:
+
+```
+Vòng lặp thứ 1: 1
+Vòng lặp thứ 2: 2
+Vòng lặp thứ 3: 3
+Vòng lặp thứ 4: 4
+Vòng lặp thứ 5: 5
+```
+### 2. while
+**Syntax:**
+
+```java
+while (condition) {
+    // block of commands to be executed
+}
+```
+
+**Example:**
+
+```java
+int index = 1;
+
+while (index <= 5) {
+    System.out.println("Vòng lặp thứ " + i ":" + i);
+    index++; // Nếu không có index++ vòng lặp sẽ trở thành vòng lặp vô hạn
+}
+```
+
+Result:
+
+```
+Vòng lặp thứ 1: 1
+Vòng lặp thứ 2: 2
+Vòng lặp thứ 3: 3
+Vòng lặp thứ 4: 4
+Vòng lặp thứ 5: 5
+```
+
+### 3. do while
+
+```java
+do {
+    // block of commands to be executed
+} while (condition);
+```
+
+## 10. Mảng 1 chiều (Array)
