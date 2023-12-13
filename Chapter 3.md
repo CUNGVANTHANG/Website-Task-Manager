@@ -1,6 +1,6 @@
-## 1. Mảng 1 chiều (Array)
+## 1. Array
 
-**Tạo mảng có giá trị:**
+**Create array with values:**
 ```java
 int[] age = {24, 23, 18, 19, 20};
 ```
@@ -11,15 +11,16 @@ hoặc
 int numbers[] = {24, 23, 18, 19, 20};
 
 ```
-**Tạo mảng bằng cách xác định kích thước:**
+
+**Create array by specifying dimensions:**
 ```java
-int[] numbers = new int[4]; // 4 chính là số lượng phần tử trong mảng
+int[] numbers = new int[4]; // 4 is the number of elements in the array
 ```
 
 hoặc
 
 ```java
-int numbers[] = new int[4]; // 4 chính là số lượng phần tử trong mảng
+int numbers[] = new int[4]; // 4 is the number of elements in the array
 ```
 
-## 2. Bài tập
+## 2. Exercise
