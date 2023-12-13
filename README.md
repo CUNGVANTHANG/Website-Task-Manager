@@ -2,7 +2,7 @@
 
 ## TABLE OF CONTENTS
 - [LEARN JAVA CORE PROGRAMMING](#learn-java-core-programming)
-  - [MỤC LỤC](#mục-lục)
+  - [TABLE OF CONTENTS](#table-of-contents)
   - [1. Environment settings](#1-environment-settings)
   - [2. Structure of a program](#2-structure-of-a-program)
   - [3. Run the program](#3-run-the-program)
