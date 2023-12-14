@@ -73,3 +73,109 @@ Input
 Output
 
 > 8.0
+
+## 6. Calculate the average value of the elements
+Write a program to calculate the average value of array elements.
+
+- Create a double array named numbers with size 5.
+- Get input value for array.
+- Create variable sum with initial value of 0.0.
+- Run a for loop to find the sum of each array element and store it in the sum variable.
+- Outside the loop, divide sum by the total number of array elements to find the average value.
+- Print the average value.
+
+Input
+
+> 5.6
+
+> 7.8
+
+> 9.1
+
+> -11.3
+
+> 4.8
+
+Output
+
+> 3.2
+
+## 7. Exercise on changing array elements
+Write a program to change an element of an array.
+
+- Create integer array primeNumbers with elements {2, 3, 5, 7}.
+- Receive integer input from user and store in number variable. Assume that the user will always enter a prime number.
+- Change the fourth element of the array by assigning the value of number to it.
+- Print out the elements of the array.
+
+Input
+
+> 11
+
+Output
+
+> 2
+
+> 3
+
+> 5
+
+> 11
+
+## 8. Find the smallest element of the array
+Write a program to find the smallest element of an array.
+
+- int numbers[] = {55, 64, 75, 80, 65};
+
+- Find the smallest element of the array.
+
+Hint: Use the logic from the previous example to find the smallest element.
+
+Output
+
+> 55
+
+## 9. Multiply all elements of the array by 10
+Write a program to multiply each element of the array by 10.
+
+- Create an array of integer numbers with elements: 43, 78, 23, 45.
+- Create another array of integers with the same size and name it newNumbers.
+- Use for loop to access each element of numbers.
+- Inside the loop, multiply each element of numbers by 10 and assign it to newNumbers.
+- Print out the elements of newNumbers.
+
+Hint: Use the same logic as the previous example.
+
+Output
+
+> 430
+
+> 780
+
+> 230
+
+> 450
+
+## 10. Compare the first and last elements of the array
+Develop a program to compare the first and last elements of an array
+
+- Receive an array of 6 elements from the keyboard
+- Compare the first and last elements of the array. If they are equal, print Equal, if they are different, print Not Equal
+  
+Input
+
+> 12
+
+> 32
+
+> 14
+
+> 53
+
+> 7
+
+> 12
+
+Output
+
+> Equal
