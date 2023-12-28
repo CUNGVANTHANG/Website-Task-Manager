@@ -1,6 +1,6 @@
 ## 1. Method
 
-![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/62a6bb7c-154c-4642-a373-25bc9d61bf13)
+![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/759643f3-f2fe-4eb9-978c-7c1e45f05502)
 
 There are 2 types of methods:
 
@@ -80,3 +80,68 @@ Input
 Output
 
 > Self Dividing Number
+
+### Exercise 4: Prime numbers in a given range
+Develop a program to find all prime numbers between two given integers
+
+Create a `checkPrime()` method that checks whether a number is prime, returning `true` or `false`
+
+In the main program, we receive two integers x and y (y is always greater than x). Run a loop to check whether the numbers between x and y are prime numbers or not by calling the method just created. If so, print it to the screen.
+
+Input
+
+> 21
+
+> 50
+
+Output
+
+```
+23
+29
+31
+37
+41
+43
+47
+```
+
+### Project: Calculate students' test scores
+**Describe project:**
+
+Suppose you are a teaching assistant at a University and you need to grade students based on their average scores.
+
+The scores obtained by students in different subjects are stored in an array:
+
+```int scores[] = [55, 64, 75, 80, 65];```
+
+Your job is to first calculate the average score. And based on the average score, you convert the student's score.
+
+Rules for converting points:
+
+Score A if the average score is equal to or greater than 80
+
+Score B if the average score is equal to or greater than 60 and less than 80
+
+Grade C if the average score is equal to or greater than 50 and less than 60
+
+Score F if the average score is less than 50
+
+**Implementation process:**
+
+We need to perform two tasks:
+
+- calculate average score
+- points conversion
+  
+To complete the tasks, we will create methods.
+
+1. `getAverageScore()` method
+
+The method takes an array (containing scores) as argument, calculates the average score, and returns it.
+
+2. `computeGrade()` method
+
+The method takes the average score as an argument, converts the score, and returns it.
+
+In that spirit, let's create the program's first method.
