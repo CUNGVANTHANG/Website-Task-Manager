@@ -19,3 +19,7 @@ Start by creating an array to store contacts. Each contact can be represented by
 Use a `while` loop to create a menu and loop until the user chooses to exit.
 Write functions like `addContact`, `searchContact`, `displayContacts`, `deleteContact` to perform the corresponding functions.
 When building functions, remember to check and properly handle necessary conditions and messages.
+
+**Data:**
+
+0363472708, 0922527014, 0987654321, 0265789321, 0968753156, 0999988887
