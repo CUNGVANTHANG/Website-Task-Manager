@@ -106,7 +106,7 @@ Output
 47
 ```
 
-### Project: Calculate students' test scores
+### Project 1: Calculate students' test scores
 **Describe project:**
 
 Suppose you are a teaching assistant at a University and you need to grade students based on their average scores.
