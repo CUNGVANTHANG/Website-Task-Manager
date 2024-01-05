@@ -15,16 +15,19 @@
   - [10. Array](#10-array)
   - [11. Method](#11-method)
   - [12. String](#12-string)
-  - [13. Switch, case](#13-switch-case)
+  - [13. Switch case](#13-switch-case)
   - [14. break, continue](#14-break-continue)
+  - [15. i++, ++i](#15-i-i)
+  - [16. Ternary operator](#16-ternary-operator)
+  - [17. Recursive](#17-recursive)
 
 ## 1. Environment settings
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 (Updating) 
 
 ## 2. Structure of a program
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 The class name `helloworld` must match the file name `helloworld.java`
 
@@ -39,7 +42,7 @@ class helloworld {
 `main` is to run the main code of the program
 
 ## 3. Run the program
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 - **Method 1:** Runs on `Visual Studio Code`
 
@@ -73,7 +76,7 @@ java [Class name (excluding .class after)]
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/b23f95a5-d831-4d55-83b6-1c4b43b0b7a1)
 
 ## 4. Print to screen
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 **a) Method 1:** Print out the content **Enter new line**
 
@@ -132,7 +135,7 @@ I am Thang
 ```
 
 ## 5. Declare variable
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 Every time **declaring a variable**, the system will allocate a **memory cell** to store the **value of that variable**
 
@@ -168,7 +171,7 @@ boolean isFalse = false;
 ```
 
 ## 6. Operator
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 | Operator | Function |
 | :---: | :---: |
@@ -216,7 +219,7 @@ number /= 2;
 ```
 
 ## 7. Enter the value from the keyboard
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 **Syntax:**
 
@@ -242,6 +245,12 @@ Scanner input = new Scanner(System.in);
 
 `next()` is to enter a string without spaces from the keyboard
 
+- **Close Scanner object:**
+
+```java
+input.close();
+```
+
 *Example:*
 
 ```java
@@ -254,12 +263,13 @@ class printNumber {
 
         System.out.println(number);
 
+        input.close();
     }
 }
 ```
 
 ## 8. if, else if, else
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 **Syntax:**
 
@@ -283,7 +293,7 @@ In the `if` condition, if we want to compare equality, we use the `==` operator
 - It is not necessary to have an `else` statement after every `if` statement in a Java program
 
 ## 9. for, while, do while
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 ### 1. for
 **Syntax:**
@@ -371,7 +381,7 @@ Vòng lặp thứ 1
 **Note: The `do..while` loop will always repeat once even if the condition is false. If the condition is true, it is like any other loop**
 
 ## 10. Array
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 ### 1. One-dimensional array
 
@@ -472,11 +482,11 @@ System.out.println(array.length);
 
 
 ## 11. Method
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 
 ## 12. String
-[:arrow_up: Mục lục](#table-of-contents)
+[:arrow_up: Table of contents](#table-of-contents)
 
 | Method | Description |
 | :--- | :--- |
@@ -490,3 +500,64 @@ System.out.println(array.length);
 | Operator | Description |
 | :--- | :--- |
 | ```+``` | nối hai chuỗi |
+
+## 13. Switch case
+[:arrow_up: Table of contents](#table-of-contents)
+
+**Syntax**
+
+```java
+switch(select) {
+    case 1:
+        ...
+        break;
+    case 2:
+        ...
+        break;
+    ...
+    default:
+        ...
+        break;
+}
+```
+
+**Example:**
+
+```java
+int select = 2;
+switch (select) {
+      case 1:
+        System.err.println("Lựa chọn 1");
+        break;
+      case 2:
+        System.err.println("Lựa chọn 2");
+        break;
+      case 3:
+        System.err.println("Lựa chọn 3");
+        break;
+      default: // This means the default choice, if all of the above cases are false
+        System.err.println("Lựa chọn bất kỳ");
+      break;
+}
+```
+
+*Result:*
+
+```
+Lựa chọn 2
+```
+
+**Attention:** After each case, there must be a `break` statement, otherwise there will be a conflict between `case`
+
+## 14. break, continue
+[:arrow_up: Table of contents](#table-of-contents)
+
+## 15. i++, ++i
+[:arrow_up: Table of contents](#table-of-contents)
+
+## 16. Ternary operator
+[:arrow_up: Table of contents](#table-of-contents)
+
+## 17. Recursive
+[:arrow_up: Table of contents](#table-of-contents)
+
