@@ -12,9 +12,11 @@
   - [7. Enter the value from the keyboard](#7-enter-the-value-from-the-keyboard)
   - [8. if, else if, else](#8-if-else-if-else)
   - [9. for, while, do while](#9-for-while-do-while)
-  - [10. Array](#10-Array)
+  - [10. Array](#10-array)
 
 ## 1. Environment settings
+
+(Updating) 
 
 ## 2. Structure of a program
 
@@ -65,7 +67,7 @@ java [Class name (excluding .class after)]
 
 ## 4. Print to screen
 
-**Method 1:** Print out the content **Enter new line**
+**a) Method 1:** Print out the content **Enter new line**
 
 ```java
 System.err.println("Hello");
@@ -79,7 +81,7 @@ Hello
 Hi
 ```
 
-**Step 2:** Print out the content
+**b) Method 2:** Print out the content
 
 ```java
 System.err.print("Hello");
@@ -104,6 +106,21 @@ System.err.print("Hi");
 ```
 Hello
 Hi
+```
+
+Simply put, `println` means to print with a line break, and `print` means to print without a line break
+
+**c) String concatenation:** We use the string concatenation operator `+`
+
+```java
+String name = "Thang";
+System.out.println("I am " + names);
+```
+
+*Result:*
+
+```
+I am Thang
 ```
 
 ## 5. Declare variable
@@ -292,6 +309,22 @@ do {
 
 **Example:**
 
+```java
+int index = 1;
+
+do {
+    System.out.println("Vòng lặp thứ " + i ":" + i);
+    index++; // Without index++ the loop becomes an infinite loop
+} while (index > 5);
+```
+
+*Result:*
+
+```
+Vòng lặp thứ 1
+```
+
+**Note: The `do..while` loop will always repeat once even if the condition is false. If the condition is true, it is like any other loop**
 
 ## 10. Array
 ### 1. One-dimensional array
@@ -301,7 +334,7 @@ do {
 int[] age = {24, 23, 18, 19, 20};
 ```
 
-hoặc
+or
 
 ```java
 int numbers[] = {24, 23, 18, 19, 20};
@@ -313,10 +346,14 @@ int numbers[] = {24, 23, 18, 19, 20};
 int[] numbers = new int[4]; // 4 is the number of elements in the array
 ```
 
-hoặc
+or
 
 ```java
 int numbers[] = new int[4]; // 4 is the number of elements in the array
 ```
 
 ### 2. Two-dimensional array
+
+(Updating)
+
+## 11. Method
