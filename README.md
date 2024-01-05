@@ -78,7 +78,7 @@ java [Class name (excluding .class after)]
 ## 4. Print to screen
 [:arrow_up: Table of contents](#table-of-contents)
 
-**a) Method 1:** Print out the content **Enter new line**
+- **Method 1:** Print out the content **Enter new line**
 
 ```java
 System.out.println("Hello");
@@ -92,7 +92,7 @@ Hello
 Hi
 ```
 
-**b) Method 2:** Print out the content
+- **Method 2:** Print out the content
 
 ```java
 System.out.print("Hello");
@@ -121,7 +121,7 @@ Hi
 
 Simply put, `println` means to print with a line break, and `print` means to print without a line break
 
-**c) String concatenation:** We use the string concatenation operator `+`
+- **String concatenation:** We use the string concatenation operator `+`
 
 ```java
 String names = "Thang";
@@ -188,7 +188,7 @@ boolean isFalse = false;
 | &#124;&#124; | OR |
 | `!` | NOT |
 
-**Attention:**
+- **Attention:**
 
 ```java
 number = number + 1;
@@ -507,7 +507,7 @@ int data[][] = new int[3][4];
 ## 11. Method
 [:arrow_up: Table of contents](#table-of-contents)
 
-**Create method:**
+- **Create method:**
 
 ```java
 returnType methodName() {
@@ -522,7 +522,7 @@ in there:
 
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/759643f3-f2fe-4eb9-978c-7c1e45f05502)
 
-**Method returns value:** `int`, `double`, `String`, `boolean` 
+- **Method returns value:** `int`, `double`, `String`, `boolean` 
 
 ```java
 public static int numbers(parameter) {
@@ -539,7 +539,28 @@ public static void main(String[] args) {
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/6868b368-6458-42c6-92ec-e4c95f579f72)
 
 
-**Method does not return value:** `void`
+*Example:*
+
+```java
+public class Example {
+
+    // The method returns an int value
+    public static int addNumbers(int a, int b) {
+        int sum = a + b;
+        return sum; // Returns the sum of a and b
+    }
+
+    public static void main(String[] args) {
+        // Call the method and get the return value
+        int result = addNumbers(5, 7);
+
+        // Print the results
+        System.out.println("Tổng của 5 và 7 là: " + result); // Result = 12
+    }
+}
+```
+
+- **Method does not return value:** `void`
 
 ```java
 public static void numbers(parameter) {
@@ -552,6 +573,24 @@ public static void main(String[] args) {
 ```
 
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/5765671f-5b5b-4093-9aaa-e17a824c2da2)
+
+*Example:*
+
+```java
+public class Example {
+
+    // Method does not return value (void)
+    public static void printGreeting(String name) {
+        System.out.println("Xin chào, " + name + "!");
+        // The method does not have a return statement
+    }
+
+    public static void main(String[] args) {
+        // Calling the method does not return a value
+        printGreeting("John"); // Result: Xin chào John!
+    }
+}
+```
 
 ## 12. String
 [:arrow_up: Table of contents](#table-of-contents)
