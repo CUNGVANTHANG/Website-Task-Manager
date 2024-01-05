@@ -13,6 +13,10 @@
   - [8. if, else if, else](#8-if-else-if-else)
   - [9. for, while, do while](#9-for-while-do-while)
   - [10. Array](#10-array)
+  - [11. Method](#11-method)
+  - [12. String](#12-string)
+  - [13. Switch, case](#13-switch-case)
+  - [14. break, continue](#14-break-continue)
 
 ## 1. Environment settings
 
@@ -352,8 +356,34 @@ or
 int numbers[] = new int[4]; // 4 is the number of elements in the array
 ```
 
+**Determine the length of the array**
+
+Use `Array.length` to determine the length of the array
+
+```java
+int array[] = {1, 2, 3, 4, 5};
+System.out.println(array.length);
+```
+
+*Result:*
+
+```
+5
+```
+
+```java
+int array[] = new int array[1000];
+System.out.println(array.length);
+```
+
+*Result:*
+
+```
+1000
+```
+
 ### 2. Two-dimensional array
 
-(Updating)
 
 ## 11. Method
+
