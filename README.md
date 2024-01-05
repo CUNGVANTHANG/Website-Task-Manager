@@ -520,6 +520,8 @@ in there:
 - ```methodName()``` - method name
 - ```{...}``` - the body of the method
 
+![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/759643f3-f2fe-4eb9-978c-7c1e45f05502)
+
 **Method returns value:** `int`, `double`, `String`, `boolean` 
 
 ```java
@@ -533,6 +535,23 @@ public static void main(String[] args) {
       int n = numbers(arguments)
 }
 ```
+
+![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/6868b368-6458-42c6-92ec-e4c95f579f72)
+
+
+**Method does not return value:** `void`
+
+```java
+public static void numbers(parameter) {
+      ...
+}
+
+public static void main(String[] args) {
+      numbers(arguments)
+}
+```
+
+![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/5765671f-5b5b-4093-9aaa-e17a824c2da2)
 
 ## 12. String
 [:arrow_up: Table of contents](#table-of-contents)
