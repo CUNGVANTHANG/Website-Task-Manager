@@ -15,7 +15,7 @@
   - [10. Array](#10-array)
   - [11. Method](#11-method)
   - [12. String](#12-string)
-  - [13. Switch case](#13-switch-case)
+  - [13. switch case](#13-switch-case)
   - [14. break, continue](#14-break-continue)
   - [15. i++, ++i](#15-i-i)
   - [16. Ternary operator](#16-ternary-operator)
@@ -480,13 +480,68 @@ System.out.println(array.length);
 
 ### 2. Two-dimensional array
 
+**Create a 2-dimensional array with values:**
+
+```java
+int[][] data = { {2, 3, 5}, {7, 14, 21}, {1, 3, 5} };
+```
+
+or 
+
+```java
+int data[][] = { {2, 3, 5}, {7, 14, 21}, {1, 3, 5} };
+```
+
+**Create a 2-dimensional array by specifying the dimensions:**
+
+```java
+int[][] data = new int[3][4];
+```
+
+or
+
+```java
+int data[][] = new int[3][4];
+```
 
 ## 11. Method
 [:arrow_up: Table of contents](#table-of-contents)
 
+**Create method:**
+
+```java
+returnType methodName() {
+    // your code
+}
+```
+
+in there:
+- ```returnType``` - represents the data type returned by the method (e.g. ```int``` means returning an integer, ```double``` means returning a number floating point, etc.).
+- ```methodName()``` - method name
+- ```{...}``` - the body of the method
+
+**Method returns value:** `int`, `double`, `String`, `boolean` 
+
+```java
+public static int numbers(parameter) {
+      ...
+
+      return value;
+}
+
+public static void main(String[] args) {
+      int n = numbers(arguments)
+}
+```
 
 ## 12. String
 [:arrow_up: Table of contents](#table-of-contents)
+
+**Declare variable:**
+
+```java
+String names = "Cung Van Thang"
+```
 
 | Method | Description |
 | :--- | :--- |
@@ -501,7 +556,7 @@ System.out.println(array.length);
 | :--- | :--- |
 | ```+``` | nối hai chuỗi |
 
-## 13. Switch case
+## 13. switch case
 [:arrow_up: Table of contents](#table-of-contents)
 
 **Syntax**
@@ -551,6 +606,41 @@ Lựa chọn 2
 
 ## 14. break, continue
 [:arrow_up: Table of contents](#table-of-contents)
+
+- `break` stops and exits the loop or switch it is in, transferring control to the statement behind it.
+
+```java
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // Exit the loop when i reaches value 5
+    }
+    System.out.print(i + " ");
+}
+```
+
+*Result:*
+
+```
+0 1 2 3 4
+```
+
+- `continue` is a keyword used to skip the rest of a loop and go immediately to the next step of the loop
+
+```java
+for (int i = 0; i < 5; i++) {
+    if (i == 2) {
+        continue; // Skip the iteration when i reaches value 2
+    }
+    System.out.println(i);
+}
+
+```
+
+*Result:*
+
+```
+0 1 3 4
+```
 
 ## 15. i++, ++i
 [:arrow_up: Table of contents](#table-of-contents)
