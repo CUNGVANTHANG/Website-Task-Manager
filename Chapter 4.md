@@ -1,25 +1,89 @@
 ## 1. Method
 
+- **Create method:**
+
+```java
+returnType methodName() {
+    // your code
+}
+```
+
+in there:
+- ```returnType``` - represents the data type returned by the method (e.g. ```int``` means returning an integer, ```double``` means returning a number floating point, etc.).
+- ```methodName()``` - method name
+- ```{...}``` - the body of the method
+
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/759643f3-f2fe-4eb9-978c-7c1e45f05502)
 
-There are 2 types of methods:
+- **Method returns value:** `int`, `double`, `String`, `boolean` 
 
-1. Method returns value
-2. The method does not return a value
+```java
+public static int numbers(parameter) {
+      ...
 
-### 1. Method returns value
+      return value;
+}
 
-Include: `public static int, public static double, public static String, public static boolean`
+public static void main(String[] args) {
+      int n = numbers(arguments)
+}
+```
 
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/6868b368-6458-42c6-92ec-e4c95f579f72)
 
 
-### 2. The method does not return a value
+*Example:*
 
-Include: `public static void`
+```java
+public class Example {
+
+    // The method returns an int value
+    public static int addNumbers(int a, int b) {
+        int sum = a + b;
+        return sum; // Returns the sum of a and b
+    }
+
+    public static void main(String[] args) {
+        // Call the method and get the return value
+        int result = addNumbers(5, 7);
+
+        // Print the results
+        System.out.println("Tổng của 5 và 7 là: " + result); // Result = 12
+    }
+}
+```
+
+- **Method does not return value:** `void`
+
+```java
+public static void numbers(parameter) {
+      ...
+}
+
+public static void main(String[] args) {
+      numbers(arguments)
+}
+```
 
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/5765671f-5b5b-4093-9aaa-e17a824c2da2)
 
+*Example:*
+
+```java
+public class Example {
+
+    // Method does not return value (void)
+    public static void printGreeting(String name) {
+        System.out.println("Xin chào, " + name + "!");
+        // The method does not have a return statement
+    }
+
+    public static void main(String[] args) {
+        // Calling the method does not return a value
+        printGreeting("John"); // Result: Xin chào John!
+    }
+}
+```
 
 ## 2. Exercises
 ### Exercise 1. Exercises on the factorial of a number
