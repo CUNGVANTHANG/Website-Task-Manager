@@ -19,10 +19,12 @@
   - [14. break, continue](#14-break-continue)
 
 ## 1. Environment settings
+[:arrow_up: Mục lục](#table-of-contents)
 
 (Updating) 
 
 ## 2. Structure of a program
+[:arrow_up: Mục lục](#table-of-contents)
 
 The class name `helloworld` must match the file name `helloworld.java`
 
@@ -37,6 +39,7 @@ class helloworld {
 `main` is to run the main code of the program
 
 ## 3. Run the program
+[:arrow_up: Mục lục](#table-of-contents)
 
 - **Method 1:** Runs on `Visual Studio Code`
 
@@ -70,12 +73,13 @@ java [Class name (excluding .class after)]
 ![image](https://github.com/CUNGVANTHANG/JAVA-CORE/assets/96326479/b23f95a5-d831-4d55-83b6-1c4b43b0b7a1)
 
 ## 4. Print to screen
+[:arrow_up: Mục lục](#table-of-contents)
 
 **a) Method 1:** Print out the content **Enter new line**
 
 ```java
-System.err.println("Hello");
-System.err.println("Hi");
+System.out.println("Hello");
+System.out.println("Hi");
 ```
 
 *Result:*
@@ -88,8 +92,8 @@ Hi
 **b) Method 2:** Print out the content
 
 ```java
-System.err.print("Hello");
-System.err.print("Hi");
+System.out.print("Hello");
+System.out.print("Hi");
 ```
 
 *Result:*
@@ -101,8 +105,8 @@ HelloHi
 If you want to print out the finished content **on a new line** like method 1, add `\n` inside the `""`
 
 ```java
-System.err.print("Hello\n"); // '\n' meaning is line break
-System.err.print("Hi");
+System.out.print("Hello\n"); // '\n' meaning is line break
+System.out.print("Hi");
 ```
 
 *Result:*
@@ -117,7 +121,7 @@ Simply put, `println` means to print with a line break, and `print` means to pri
 **c) String concatenation:** We use the string concatenation operator `+`
 
 ```java
-String name = "Thang";
+String names = "Thang";
 System.out.println("I am " + names);
 ```
 
@@ -128,6 +132,7 @@ I am Thang
 ```
 
 ## 5. Declare variable
+[:arrow_up: Mục lục](#table-of-contents)
 
 Every time **declaring a variable**, the system will allocate a **memory cell** to store the **value of that variable**
 
@@ -163,6 +168,7 @@ boolean isFalse = false;
 ```
 
 ## 6. Operator
+[:arrow_up: Mục lục](#table-of-contents)
 
 | Operator | Function |
 | :---: | :---: |
@@ -179,7 +185,38 @@ boolean isFalse = false;
 | &#124;&#124; | OR |
 | `!` | NOT |
 
+**Attention:**
+
+```java
+number = number + 1;
+
+// Can be replaced with
+number += 1;
+```
+
+```java
+number = number - 1;
+
+// Can be replaced with
+number -= 1;
+```
+
+```java
+number = number * 2;
+
+// Can be replaced with
+number *= 2;
+```
+
+```java
+number = number / 2;
+
+// Can be replaced with
+number /= 2;
+```
+
 ## 7. Enter the value from the keyboard
+[:arrow_up: Mục lục](#table-of-contents)
 
 **Syntax:**
 
@@ -215,13 +252,14 @@ class printNumber {
         Scanner input = new Scanner(System.in);
         int number = input.nextInt();
 
-        System.err.println(number);
+        System.out.println(number);
 
     }
 }
 ```
 
 ## 8. if, else if, else
+[:arrow_up: Mục lục](#table-of-contents)
 
 **Syntax:**
 
@@ -245,6 +283,8 @@ In the `if` condition, if we want to compare equality, we use the `==` operator
 - It is not necessary to have an `else` statement after every `if` statement in a Java program
 
 ## 9. for, while, do while
+[:arrow_up: Mục lục](#table-of-contents)
+
 ### 1. for
 **Syntax:**
 
@@ -331,6 +371,8 @@ Vòng lặp thứ 1
 **Note: The `do..while` loop will always repeat once even if the condition is false. If the condition is true, it is like any other loop**
 
 ## 10. Array
+[:arrow_up: Mục lục](#table-of-contents)
+
 ### 1. One-dimensional array
 
 **Create array with values:**
@@ -354,6 +396,50 @@ or
 
 ```java
 int numbers[] = new int[4]; // 4 is the number of elements in the array
+```
+
+**Get value from array:** We use a loop to run through each ith element in the Array
+
+```java
+int numbers[] = {1, 2, 3, 4, 5};
+
+for (int i = 0; i < numbers.length; i++) {
+    System.out.print(numbers[i] + " ");
+}
+```
+
+*Result:*
+
+```
+1 2 3 4 5
+```
+
+**Enter values ​​from the keyboard and pass them into the array:** We also use a loop through each ith element in the array
+
+```java
+Scanner input = new Scanner(System.in);
+int numbers[] = new int[100];
+
+for (int i = 0; i < numbers.length; i++) {
+    numbers[i] = input.nextInt();
+}
+```
+
+**Assign another value to the array:**
+
+```java
+int numberPrime = 3;
+int numbers[] = new int[100];
+
+number[2] = 3; // That means the second element in the array from 0, 1, 2... has the value of 3
+
+System.out.print(numbers[2] + " ");
+```
+
+*Result:*
+
+```
+3
 ```
 
 **Determine the length of the array**
@@ -386,4 +472,21 @@ System.out.println(array.length);
 
 
 ## 11. Method
+[:arrow_up: Mục lục](#table-of-contents)
 
+
+## 12. String
+[:arrow_up: Mục lục](#table-of-contents)
+
+| Method | Description |
+| :--- | :--- |
+| ```length()``` | find the length of the string |
+| ```charAt()``` | get the character of a string |
+| ```concat()``` | concatenate two strings |
+| ```equals()``` | compare two strings |
+| ```toLowerCase()``` | convert string to lower case |
+| ```toUpperCase()``` | convert string to uppercase |
+
+| Operator | Description |
+| :--- | :--- |
+| ```+``` | nối hai chuỗi |
