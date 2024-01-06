@@ -611,10 +611,29 @@ String names = "Cung Van Thang"
 | ```equals()``` | compare two strings |
 | ```toLowerCase()``` | convert string to lower case |
 | ```toUpperCase()``` | convert string to uppercase |
+| `substring()` | cut substring |
 
 | Operator | Description |
 | :--- | :--- |
 | ```+``` | nối hai chuỗi |
+
+*Example 1:*
+
+```java
+String text = "Programming";
+int length = text.length();
+System.out.println("Chiều dài của chuỗi là: " + length);  // Output: 11
+```
+
+*Example 2:*
+
+```java
+String message = "Hello, World!";
+char firstChar = message.charAt(0);
+String substring = message.substring(7, 12); 
+System.out.println("Ký tự đầu tiên: " + firstChar);  // Output: H
+System.out.println("Phụ chuỗi từ vị trí 7 đến 12: " + substring);  // Output: World
+```
 
 ## 13. switch case
 [:arrow_up: Table of contents](#table-of-contents)
@@ -704,6 +723,35 @@ for (int i = 0; i < 5; i++) {
 ## 15. i++, ++i
 [:arrow_up: Table of contents](#table-of-contents)
 
+**1. `i++` (Post-increment):**
+
+- Increase the value of i by one unit.
+- Returns the old value of i before increasing.
+- Use the old value of i in the expression and then increase the value.
+
+```java
+int i = 5;
+int result = i++;
+System.out.println("Giá trị của i: " + i);      // Output: 6
+System.out.println("Giá trị của result: " + result);  // Output: 5
+```
+
+**2. `++i` (Pre-increment):**
+
+- Increase the value of i by one unit.
+- Returns the new value of i after increasing.
+- Use the new value of i in the expression.
+
+```java
+int i = 5;
+int result = ++i;
+System.out.println("Giá trị của i: " + i);      // Output: 6
+System.out.println("Giá trị của result: " + result);  // Output: 6
+
+```
+
+In short, the main difference between `i++` and `++i` is the moment when the value of i is increased. `i++` returns the old value and then increments, while `++i` increments first and returns the new value.
+
 ## 16. Ternary operator
 [:arrow_up: Table of contents](#table-of-contents)
 
@@ -729,6 +777,33 @@ public class TernaryOperatorExample {
 
 ## 17. Recursive
 [:arrow_up: Table of contents](#table-of-contents)
+
+Recursion is a concept in programming in which a method calls itself to solve a problem.
+
+```java
+public class RecursionExample {
+    public static void main(String[] args) {
+        int n = 5;
+        int factorialResult = factorial(n);
+        System.out.println("Factorial of " + n + " là " + factorialResult);
+    }
+
+    // Phương thức tính giai thừa đệ quy
+    public static int factorial(int n) {
+        // Recursion breakpoint
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            // Call itself with input decremented by 1
+            return n * factorial(n - 1);
+        }
+    }
+}
+```
+
+![image](https://github.com/CUNGVANTHANG/Course_Java-core/assets/96326479/dbbf740d-28d3-4ee6-af60-e0214dae7683)
+
+In this example, the factorial function is a recursive function that calculates the factorial. This function calls itself with the input decremented by 1 until a breakpoint is reached (when n is 0 or 1). It is important to have a stopping condition in the recursion to avoid infinite calls.
 
 ## 18. Random number
 [:arrow_up: Table of contents](#table-of-contents)
@@ -790,3 +865,46 @@ public class RandomRangeExample {
 ## 19. Algorithm complexity
 [:arrow_up: Table of contents](#table-of-contents)
 
+Algorithm complexity is a concept that measures the increase in resources (time or memory space) that an algorithm uses as input increases. There are two main types of complexity: time complexity and space complexity.
+
+**1. Time Complexity:**
+
+- Best Case: This is the time complexity of the algorithm when the input makes the algorithm run the fastest. Usually denoted as `O(f(n))`, with `f(n)` is the function that can best characterize the time complexity.
+
+- Average Case: This is the average time complexity of the algorithm over all possible cases. Usually denoted as `O(g(n))`, where `g(n)` is an average function that can characterize the time complexity.
+
+- Worst Case: This is the time complexity of the algorithm when the input makes the algorithm run the slowest. Usually denoted as `O(h(n))`, with `h(n)` is the worst possible function that characterizes the time complexity.
+
+**2. Space Complexity:**
+
+Space complexity measures how much memory an algorithm uses and varies with input size.
+
+- **How to find complexity:**
+
+To find the complexity of a piece of code, you will often analyze the number of times basic operations (compare, assign, perform operations) depend on the input size. Here is an example with a simple code to sum elements in an array:
+
+```java
+public class Example {
+    public static int sumArray(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        int result = sumArray(numbers);
+        System.out.println("Tổng các phần tử trong mảng là: " + result);
+    }
+}
+```
+
+Now let's analyze the time complexity of the `sumArray` function. In this case, the for loop runs through all `n` elements in the array (where `n` is the length of the array). Therefore:
+
+Worst complexity: `O(n)` - because we need to take `n` steps to sum all the elements in the array.
+
+Best complexity: `O(n)` - in this case, assume the array has at least one element, because we have to do at least one step.
+
+Average complexity: `O(n)` - this is also `O(n)`, because each element in the array needs to be considered once.
