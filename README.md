@@ -20,6 +20,8 @@
   - [15. i++, ++i](#15-i-i)
   - [16. Ternary operator](#16-ternary-operator)
   - [17. Recursive](#17-recursive)
+  - [18. Random number](#18-random-number)
+  - [19. Algorithm complexity)(#19-algorithm-complexity)
 
 ## 1. Environment settings
 [:arrow_up: Table of contents](#table-of-contents)
@@ -709,3 +711,8 @@ for (int i = 0; i < 5; i++) {
 ## 17. Recursive
 [:arrow_up: Table of contents](#table-of-contents)
 
+## 18. Random number
+[:arrow_up: Table of contents](#table-of-contents)
+
+## 19. Algorithm complexity
+[:arrow_up: Table of contents](#table-of-contents)
