@@ -21,7 +21,7 @@
   - [16. Ternary operator](#16-ternary-operator)
   - [17. Recursive](#17-recursive)
   - [18. Random number](#18-random-number)
-  - [19. Algorithm complexity)(#19-algorithm-complexity)
+  - [19. Algorithm complexity](#19-algorithm-complexity)
 
 ## 1. Environment settings
 [:arrow_up: Table of contents](#table-of-contents)
@@ -693,7 +693,6 @@ for (int i = 0; i < 5; i++) {
     }
     System.out.println(i);
 }
-
 ```
 
 *Result:*
@@ -708,11 +707,86 @@ for (int i = 0; i < 5; i++) {
 ## 16. Ternary operator
 [:arrow_up: Table of contents](#table-of-contents)
 
+The ternary operator in Java allows you to write a concise expression that tests a condition and returns a value based on the result of that condition.
+
+```java
+condition ? expression_if_true : expression_if_false;
+```
+
+If the condition is `true`, the expression returns the value of `expression_if_true`, otherwise if the condition is `false`, it returns the value of `expression_if_false`.
+
+```java
+public class TernaryOperatorExample {
+    public static void main(String[] args) {
+        int number = 7;
+        String result = (number % 2 == 0) ? "Even number" : "Odd number";
+        System.out.println(result);
+    }
+}
+```
+
+`(number % 2 == 0) ? "Even number" : "Odd number"` checks whether `number` is even or not. If the number is even, the expression will return `"Even Number"`, otherwise return `"Odd Number"`
+
 ## 17. Recursive
 [:arrow_up: Table of contents](#table-of-contents)
 
 ## 18. Random number
 [:arrow_up: Table of contents](#table-of-contents)
 
+Use the `java.util.Random` class to generate random numbers. 
+
+```java
+import java.util.Random;
+
+public class RandomExample {
+    public static void main(String[] args) {
+        // Create an object of class Random
+        Random random = new Random();
+
+        // Generate random numbers of type int
+        int randomNumber = random.nextInt();
+
+        System.out.println("Random number: " + randomNumber);
+    }
+}
+```
+
+`random.nextInt()` generates a random integer.
+
+If you want to limit the range of the random number, you can use methods like `nextInt(int bound)` to generate an integer from 0 to `bound - 1`, or `nextDouble()` to generate a number real from 0.0 to 1.0.
+
+```java
+// Generate integers from 0 to 9
+int randomIntInRange = random.nextInt(10);
+
+// Generate real numbers from 0.0 to 1.0
+double randomDouble = random.nextDouble();
+```
+
+To generate a random number within a specific range `[a, b]`, you can use the Random class and combine it with operators to ensure that the random number is within the desired range.
+
+```java
+import java.util.Random;
+
+public class RandomRangeExample {
+    public static void main(String[] args) {
+        // About wanting to generate random numbers: [a, b]
+        int a = 5;
+        int b = 15;
+
+        // Create Random object
+        Random random = new Random();
+
+        // Generate random numbers in range [a, b]
+        int randomNumberInRange = random.nextInt(b - a + 1) + a;
+
+        System.out.println("Random number in range [" + a + ", " + b + "]: " + randomNumberInRange);
+    }
+}
+```
+
+`random.nextInt(b - a + 1)` generates a random integer between 0 and `b - a`, which is then added to `a` to convert it to a random integer between `[a, b]`
+
 ## 19. Algorithm complexity
 [:arrow_up: Table of contents](#table-of-contents)
+
