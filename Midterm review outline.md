@@ -80,3 +80,30 @@
 | 2 | `11` | `1 1 1 2 3 5 8 13 21 34 55`| `false` |
 | 3 | `8` | `1 1 2 3 5 8 13 21`| `true` |
 | 4 | `8` | `1 1 1 2 3 5 2 1`| `false` |
+
+## 11. Write a Java program to delete the kth element in the array. Print out the new array after deletion
+
+| Testcase | Input 1 | Array | Input 2 | Output |
+| :---: | :---: | :---: | :---: | :---: |
+| 1 | `6` | `23 -112 34 243 10 9` | `1` | `23 34 243 10 9` |
+| 2 | `11` | `2805 123 564 897 112 556 444 0 1 2 4` | `5` | `2805 123 564 897 112 444 0 1 2 4` |
+
+## 12. Write a Java program to check whether an array is an arithmetic sequence. If it has to print `true`, otherwise print `false`
+
+| Testcase | Input | Array | Output |
+| :---: | :---: | :---: | :---: |
+| 1 | `6` | `1 2 3 4 5 6` | `true` |
+| 2 | `11` | `1 1 1 2 3 5 8 13 21 34 55`| `false` |
+| 3 | `8` | `1 5 9 13 17 21 25 29`| `true` |
+| 4 | `8` | `-2 2 6 10 14 18 22 26`| `false` |
+
+## 13. Write Java code to check whether the program has a multiplier sequence or not. If must print `true`, do not print `false`
+
+| Testcase | Input | Array | Output |
+| :---: | :---: | :---: | :---: |
+| 1 | `6` | `2 4 8 16 32` | `true` |
+| 2 | `11` | `1 1 1 2 3 5 8 13 21 34 55`| `false` |
+| 3 | `8` | `1 5 9 13 17 21 25 29`| `false` |
+| 4 | `8` | `-4 -8 -16 -32 -64 -128 -256 -512`| `true` |
+
+## 14. 
