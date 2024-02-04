@@ -106,8 +106,6 @@
 | 3 | `8` | `1 5 9 13 17 21 25 29`| `false` |
 | 4 | `8` | `-4 -8 -16 -32 -64 -128 -256 -512`| `true` |
 
-> Refer here: https://viettuts.vn/java-string
-
 ## 14. Write a Java program to count the frequency of characters in a string. For example, `hhhfffnnnf` will print `h3 f4 n3`. This means counting the number of times that character appears in the string and printing that character only once.
 
 | Testcase | Input | Output |
@@ -116,6 +114,8 @@
 | 2 | `hhjjkdjks1` | `h2 j3 k2 d1 s1 11` |
 | 3 | `thang` | `t1 h1 a1 n1 g1` |
 | 4 | `hfgjkdhjkfagjkhhfjkdhj` | `h5 f3 g2 j5 k4 d2 a1` |
+
+> Refer here: https://viettuts.vn/java-string
 
 ## 15. Write a Java program to remove extra spaces at the beginning, middle and end.
 
@@ -126,6 +126,8 @@
 | 3 | `abc           xyz    thx   ` | `abc xyz thx` |
 | 4 | `Hoc   Lap  Trinh    Java      ` | `Hoc Lap Trinh Java` |
 
+> Refer here: https://viettuts.vn/java-string
+
 ## 16. Write a Java program to check whether two strings are reverse of each other or not. If yes, output "YES" otherwise "NO". For example, “word” and “drow” are two reversed strings.
 
 | Testcase | Input 1 | Input 2 | Output |
@@ -134,6 +136,8 @@
 | 2 | `abcxyz` | `zyxcba` | `YES` |
 | 3 | `Hello` | `Hi` | `NO` |
 | 4 | `Xin chao` | `oahc niX` | `YES` |
+
+> Refer here: https://viettuts.vn/java-string
 
 ## 17. Write a Java program to delete all adjacent and identical characters. For example `aabaarbarccrabmq` the result is `brmq`.
 
@@ -144,4 +148,28 @@
 | 3 | `arbbray` | `y` |
 | 4 | `ahdjsjm` | `ahdjsjm` |
 
-## 18. 
+> Refer here: https://viettuts.vn/java-string
+
+## 18. Without running the code, predict the result of the following code:
+
+```java
+int i = 2024;
+int result = i++;
+System.out.println("Giá trị của i: " + i);      // Output 1: ?
+System.out.println("Giá trị của result: " + result);  // Output 2: ?
+```
+
+_Please predict what Output 1 and Output 2 are?_
+
+## 19. Without running the code, predict the result of the following code:
+
+```java
+int i = 2024;
+int result = ++i;
+System.out.println("Giá trị của i: " + i);      // Output 1: ?
+System.out.println("Giá trị của result: " + result);  // Output 2: ?
+```
+
+_Please predict what Output 1 and Output 2 are?_
+
+## 20. Write a Java program to calculate the sum of the digits of any integer. For example: The number `8545604` has the sum of the digits: `8+5+4+5+6+0+4= 32`. 
