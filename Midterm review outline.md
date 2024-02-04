@@ -106,6 +106,8 @@
 | 3 | `8` | `1 5 9 13 17 21 25 29`| `false` |
 | 4 | `8` | `-4 -8 -16 -32 -64 -128 -256 -512`| `true` |
 
+> Refer here: https://viettuts.vn/java-string
+
 ## 14. Write a Java program to count the frequency of characters in a string. For example, `hhhfffnnnf` will print `h3 f4 n3`. This means counting the number of times that character appears in the string and printing that character only once.
 
 | Testcase | Input | Output |
@@ -114,3 +116,32 @@
 | 2 | `hhjjkdjks1` | `h2 j3 k2 d1 s1 11` |
 | 3 | `thang` | `t1 h1 a1 n1 g1` |
 | 4 | `hfgjkdhjkfagjkhhfjkdhj` | `h5 f3 g2 j5 k4 d2 a1` |
+
+## 15. Write a Java program to remove extra spaces at the beginning, middle and end.
+
+| Testcase | Input | Output |
+| :---: | :---: | :---: |
+| 1 | `    bbbbbb    ` | `bbbbbb` |
+| 2 | ` hello   xin chao  moi    nguoi` | `hello xin chao moi nguoi` |
+| 3 | `abc           xyz    thx   ` | `abc xyz thx` |
+| 4 | `Hoc   Lap  Trinh    Java      ` | `Hoc Lap Trinh Java` |
+
+## 16. Write a Java program to check whether two strings are reverse of each other or not. If yes, output "YES" otherwise "NO". For example, “word” and “drow” are two reversed strings.
+
+| Testcase | Input 1 | Input 2 | Output |
+| :---: | :---: | :---: | :---: |
+| 1 | `word` | `drow` | `YES` |
+| 2 | `abcxyz` | `zyxcba` | `YES` |
+| 3 | `Hello` | `Hi` | `NO` |
+| 4 | `Xin chao` | `oahc niX` | `YES` |
+
+## 17. Write a Java program to delete all adjacent and identical characters. For example `aabaarbarccrabmq` the result is `brmq`.
+
+| Testcase | Input | Output |
+| :---: | :---: | :---: |
+| 1 | `aabaarbarccrabmq` | `brmq` |
+| 2 | `aabbccxyz` | `xyz` |
+| 3 | `arbbray` | `y` |
+| 4 | `ahdjsjm` | `ahdjsjm` |
+
+## 18. 
