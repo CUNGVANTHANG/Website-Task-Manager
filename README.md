@@ -13,6 +13,32 @@
   <summary>II. Biến tĩnh, phương thức tĩnh</summary>
 
   - [1. Biến tĩnh và phương thức tĩnh trong Java](#1-biến-tĩnh-và-phương-thức-tĩnh-trong-java)
+  - [2. Nạp chồng phương thức](#2-nạp-chồng-phương-thức)
+</details>
+
+<details>
+  <summary>III. Tính đóng gói</summary>
+
+</details>
+
+<details>
+  <summary>IV. Tính kế thừa</summary>
+
+</details>
+
+<details>
+  <summary>V. Tính đa hình</summary>
+
+</details>
+
+<details>
+  <summary>VI. Tính trừu tượng</summary>
+
+</details>
+
+<details>
+  <summary>VII. Mối quan hệ giữa các đối tượng</summary>
+
 </details>
 
 ### 1. Lớp và đối tượng
@@ -380,4 +406,222 @@ Một số tính chất của phương thức static:
 - Phương thức static có để được gọi mà không cần phải khởi tạo đối tượng.
 - Trong cùng một lớp, phương thức static chỉ có thể gọi tới phương thức static khác, không thể gọi tới phương thức không phải là static.
 - Trong cùng một lớp, phương thức static không thể gọi tới các thuộc tính không phải là static.
+
+- **Truy cập thuộc tính từ phương thức tĩnh:**
+
+```java
+class Entry {
+	int x = 10;
+	public static void main(String[] args) {
+		System.out.println(x);
+	}
+}
+```
+
+Như bài trước bạn đã được học, phương thức `static` sẽ chỉ có thể truy xuất được tới biến `static`, do đó kết quả sẽ là **Lỗi biên dịch** (do phương thức `main` là phương thức `static` mà biến `x` không phải là biến `static` nên không thể gọi tới biến `x` từ phương thức `main`).
+
+
+- **Giá trị của biến static:**
+
+```java
+class MyClass{
+	public static int x = 10;
+}
+
+class Entry {
+	public static void main(String[] args) {
+		MyClass m1 = new MyClass();
+		MyClass m2 = new MyClass();
+		m1.x = 20;
+		System.out.print(m1.x + " " + m2.x);
+	}
+}
+```
+
+Biến `static` là biến mà được dùng chung cho tất cả các đối tượng nên kết quả của chương trình trên sẽ là:
+
+```
+20 20
+```
+
+### 2. Nạp chồng phương thức
+[:arrow_up: Mục lục](#mục-lục)
+
+Bài này sẽ giúp bạn hiểu về khái niệm nạp chồng phương thức trong Java.
+
+Trước hết bạn hãy xem lại hàm `abs` của lớp `Math` trong bài trước:
+
+```java
+class Math {
+	public static int abs(int x) {
+		return x < 0 ? -x : x;
+	}
+}
+```
+
+Vấn đề gặp phải với hàm này là tham số của hàm là một số nguyên, vậy nếu bạn muốn dùng hàm abs để tính giá trị tuyệt đối của một số thực hay một số nguyên kiểu long thì sao? Có thể bạn nghĩ ngay tới cách tạo thêm 2 hàm với tên gọi khác nhau như sau:
+
+```java
+class Math {
+	public static int abs(int x) {
+		return x < 0 ? -x : x;
+	}
+	public static double absDouble(double x) {
+		return x < 0 ? -x : x;		
+	}
+	public static long absLong(long x) {
+		return x < 0 ? -x : x;
+	}
+}
+```
+
+Vấn đề với cách làm này là bạn cần phải tạo ra nhiều tên hàm cho các tham số khác nhau, tại sao đều là trị tuyệt đối mà không thể dùng chung tên hàm là `abs()`?
+
+Trước hết bạn hãy thử gọi hàm `abs` của lớp `Math` có sẵn trong Java với các tham số kiểu `int`, `double`, `long`:
+
+```java
+class Entry {
+	public static void main(String[] args) {
+		int a = -5;
+		double b = -7;
+		long c = -9;
+		System.out.println(java.lang.Math.abs(a));
+		System.out.println(java.lang.Math.abs(b));
+		System.out.println(java.lang.Math.abs(c));
+	}
+}
+```
+
+Kết quả khi chạy chương trình:
+
+```
+5
+7.0
+9
+```
+
+Có thể thấy phương thức `abs()` của lớp `Math` có sẵn dùng được cho cả 3 kiểu dữ liệu là `int`, `float`, `double`. Kỹ thuật để lớp `Math` làm được việc này gọi là **nạp chồng phương thức**.
+
+- **Nạp chồng phương thức**
+
+Nếu một lớp có nhiều phương thức cùng tên nhưng khác nhau về kiểu dữ liệu hoặc số các tham số, thì đó là nạp chồng phương thức.
+
+Ví dụ bạn có thể tạo ra 2 hàm `add` để tính tổng số nguyên và số thực như sau:
+
+```java
+class Math {
+	public static int add(int a, int b) {
+		return a + b;
+	}
+
+	public static double add(double a, double b) {
+		return a + b;
+	}
+}
+
+class Entry {
+	public static void main(String[] args) {
+		System.out.println(Math.add(2, 4));
+		System.out.println(Math.add(3.5, 4.3));
+	}
+}
+```
+
+Kết quả khi chạy chương trình:
+
+```
+6
+7.8
+```
+
+Có thể thấy bạn không cần tạo ra 2 hàm với tên khác nhau để tính tổng 2 số. Đây cũng là cách mà lớp `Math` tạo ra phương thức `abs()`. Source code của phương thức `abs()` trong lớp `Math` sẽ giống như sau:
+
+```java
+class Math{
+    public static int abs(int a) {
+        return (a < 0) ? -a : a;
+    }
+
+    public static long abs(long a) {
+        return (a < 0) ? -a : a;
+    }
+
+    public static double abs(double a) {
+        return (a <= 0.0D) ? 0.0D - a : a;
+    }
+}
+```
+
+Ngoài ra bạn còn có thể nạp chồng phương thức bằng cách thay đổi số tham số của phương thức:
+
+```
+class Math {
+	public static int max(int a, int b) {
+		return (a > b) ? a : b;
+	}
+	public static int max(int a, int b, int c) {
+		int maxValue = a;
+		if(maxValue < b) {
+			maxValue = b;
+		}
+		if(maxValue < c) {
+			maxValue = c;
+		}
+		return maxValue;
+	}
+}
+```
+
+```
+class Entry {
+	public static void main(String[] args) {
+		System.out.println(Math.max(4, 5));
+		System.out.println(Math.max(4, 5, 7));
+	}
+}
+```
+
+Kết quả khi chạy chương trình:
+
+```
+5
+7
+```
+
+Ngoài ra, các phương thức được nạp chồng còn có thể gọi tới nhau:
+
+```java
+class Math {
+	public static int max(int a, int b) {
+		return (a > b) ? a : b;
+	}
+	public static int max(int a, int b, int c) {
+		return max(max(a, b), c);
+	}
+}
+
+class Entry {
+	public static void main(String[] args) {
+		System.out.println(Math.max(4, 5));
+		System.out.println(Math.max(4, 5, 7));
+	}
+}
+```
+
+Kết quả khi chạy chương trình:
+
+```
+5
+7
+```
+
+Lưu ý: trong các ví dụ của bài này tôi đều dùng phương thức `static` nhưng bạn hoàn toàn có thể thực hiện nạp chồng phương thức đối với các phương thức `non-static`.
+
+- **Lợi ích của nạp chồng phương thức**
+
+Nạp chồng phương thức giúp bạn tránh được việc tạo ra các phương thức với tên gọi khác nhau, giúp cho code trở nên gọn gàng, dễ đọc hơn. Bạn hãy xem ví dụ về hàm `System.out.println()` mà bạn vẫn hay dùng để thấy được lợi ích của nạp chồng phương thức:
+
+![image](https://github.com/CUNGVANTHANG/Learn_Programming/assets/96326479/609a6ceb-1f15-42cb-95d5-7d9783858de7)
+
+Có thể thấy nếu không có nạp chồng phương thức, thì bạn sẽ cần tới 10 cái tên cho hàm `println()` là `printlnInt()`, `printlnString()`, `printlnDouble()`, ...
 
