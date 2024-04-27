@@ -24,6 +24,7 @@
 <details>
   <summary>IV. Tính kế thừa</summary>
 
+  - [1. Tính kế thừa là gì?](#1-tính-kế-thừa-là-gì)
 </details>
 
 <details>
@@ -41,6 +42,7 @@
 
 </details>
 
+## I. Lớp và đối tượng
 ### 1. Lớp và đối tượng
 [:arrow_up: Mục lục](#mục-lục)
 
@@ -624,4 +626,84 @@ Nạp chồng phương thức giúp bạn tránh được việc tạo ra các p
 ![image](https://github.com/CUNGVANTHANG/Learn_Programming/assets/96326479/609a6ceb-1f15-42cb-95d5-7d9783858de7)
 
 Có thể thấy nếu không có nạp chồng phương thức, thì bạn sẽ cần tới 10 cái tên cho hàm `println()` là `printlnInt()`, `printlnString()`, `printlnDouble()`, ...
+
+## III. Tính đóng gói
+
+## IV. Tính kế thừa
+### 1. Tính kế thừa là gì?
+
+Giả sử bạn cần viết một chương trình lưu thông tin về các học sinh và giáo viên. Với học sinh thì bạn cần lưu các thông tin về tên, tuổi, địa chỉ, gpa (điểm trung bình) và với giáo viên thì bạn cần lưu thông tin về tên, tuổi, địa chỉ và tiền lương. Qua một hồi phân tích bạn ra được biểu đồ lớp như sau (kéo cửa sổ bài tập to ra để nhìn rõ hơn):
+
+![image](https://github.com/CUNGVANTHANG/Learn_Programming/assets/96326479/a1320d23-2687-4481-8adf-6f17dc782e76)
+
+Chắc bạn cũng đã nhận thấy được vấn đề khi nhìn vào sơ đồ này, đó là lớp `Student` và lớp `Teacher` có chung quá nhiều thuộc tính và phương thức. Vậy nếu cứ làm theo sơ đồ lớp này thì code sẽ bị trùng lặp rất nhiều và vi phạm nguyên tắc **DRY (Don't Repeat Yourself - đừng bao giờ lặp lại code)**. Kế thừa trong OOP sẽ giúp bạn giải quyết vấn đề này.
+
+Kế thừa trong lập trình hướng đối tượng chính là thừa hưởng lại những thuộc tính và phương thức của một lớp. Có nghĩa là nếu lớp A kế thừa lớp B thì lớp A sẽ có những thuộc tính và phương thức của lớp B. Do đó, từ sơ đồ trên bạn có thể tách các thuộc tính và phương thức trùng nhau ra một lớp mới tên là **Person** và cho lớp **Student** và **Teacher** kế thừa lớp này giống như sau:
+
+![image](https://github.com/CUNGVANTHANG/Learn_Programming/assets/96326479/b4ce1ab6-e0e0-49c7-baec-9906f1f62654)
+
+Có thể thấy với sơ đồ này lớp `Student` và `Teacher` sẽ thừa hưởng lại các thuộc tính chung từ lớp `Person` và code sẽ không còn bị trùng lặp. Ở trong sơ đồ trên thì mũi tên với hình tam giác rỗng ruột chính là ký hiệu thể hiện quan hệ kế thừa.
+
+Lớp được thừa hưởng những thuộc tính và phương thức từ lớp khác được gọi là dẫn xuất (Derived Class) hay lớp Con (Subclass) và lớp bị lớp khác kế thừa được gọi là lớp cơ sở (Base Class) hoặc lớp cha (Parent Class). Như ở ví dụ trên thì lớp `Person` là lớp cha (lớp cơ sở) và `Student`, `Teacher` là hai lớp con (lớp dẫn xuất).
+
+Trong ngôn ngữ lập trình Java, để kế thừa một lớp bạn dùng từ khóa `extends`, ví dụ:
+
+```java
+class Person {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+class Student extends Person {
+    private double gpa;
+
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+}
+
+class Entry {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.setName("Thien");
+        s.setAge(32);
+        s.setGpa(7);
+        System.out.println("Name: " + s.getName());
+        System.out.println("Age: " + s.getAge());
+        System.out.println("Gpa: " + s.getGpa());
+    }
+}
+```
+
+Kết quả khi chạy chương trình:
+
+```
+Name: Thien
+Age: 32
+Gpa: 7.0
+```
+
+Có thể thấy rằng lớp Student đã được thừa hưởng những phương thức của lớp `Person`.
+
+Lưu ý: các thuộc tính và phương thức có phạm vi truy cập `private` sẽ không thể được truy cập từ lớp con khi làm thực tế bạn nên tách lớp `Student` và `Person` ra làm 2 file **.java** riêng.
 
